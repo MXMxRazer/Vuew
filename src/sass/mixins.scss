@@ -1,0 +1,48 @@
+@mixin DisplaySettings($styleDirection, $req) {
+    display: flex; 
+    flex-direction: $styleDirection;
+    @if ($req) {
+    }
+    width: 100%;
+    position: relative;  
+}
+
+@mixin HDisplay($selector) {
+    @include DisplaySettings(row, false);
+    justify-content: $selector; 
+}
+
+@mixin lightMode ($light) {
+    @if ($light) {
+        background-color: darken($primary-color, 8%);
+        color: lighten($text-color, 1%); 
+    }
+}
+
+@mixin flexOptional($option) {
+    display: flex;
+    flex-direction: $option;
+    flex-wrap: nowrap;
+}
+
+@mixin borderBottom {
+    border-bottom: 2px solid rgb(65, 64, 64);
+    border-left: 2px solid rgb(65, 64, 64);
+    border-right: 2px solid rgb(65, 64, 64);
+    border-bottom-left-radius: 100px;
+    border-bottom-right-radius: 100px;
+}
+
+@mixin buttonActivity() {
+    user-select: none;
+}
+
+@mixin chatRadius($direction, $value) {
+    @if ( $direction == left ) {
+        border-bottom-left-radius: $value;
+        border-top-left-radius: $value;
+    } @else if ( $direction == right ) {
+        border-bottom-right-radius: $value;
+        border-top-right-radius: $value;
+    }
+}

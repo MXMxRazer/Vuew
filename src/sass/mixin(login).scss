@@ -1,0 +1,59 @@
+@mixin Border($thickness, $border-clr) {
+    border: $thickness solid $border-clr; 
+}
+
+@mixin flexDisplay($direction, $content, $align) {
+    display: flex;
+    flex-direction: $direction;
+    justify-content: $content;
+    align-items: $align;
+}
+
+@mixin textColor() {
+    color: $text-color; 
+    opacity: 0.86; 
+}
+
+@mixin logReg($clr, $width, $ftsz) {
+    @include textColor(); 
+    background-color: $clr;
+    width: $width;
+    padding: 0.8rem;
+    border-radius: 6px;
+    font-size: $ftsz; 
+    font-weight: bold;
+    text-align: center;
+}
+
+@mixin fPass() {
+    width: 100%;
+    background-color: transparent;
+    display: block;
+    text-align: center;
+    color: $fb-clr
+}
+
+@mixin forInputs() {
+    font-size: 1.2rem;
+    padding: 1.2rem 1rem;
+    border-radius: 6px;
+    border: none;  
+    margin-bottom: $mrg-btn;
+}
+
+@mixin lighter($color, $amount, $option, $text-color) {
+    @if ($option == light) {
+        background-color: $color;
+        color: $text-color; 
+    } @else if ($option == dark) {
+        background-color: darken($color, $amount);
+        color: darken($text-color, $amount); 
+    }
+}
+
+@mixin infoText($color) {
+    font-size: 0.8rem;
+    color: $color; 
+    line-height: 1rem;
+}
+ 

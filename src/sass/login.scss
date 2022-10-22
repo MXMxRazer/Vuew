@@ -1,0 +1,244 @@
+@import './variables';
+@import './reset.scss';
+@import './mixin\(login\).scss';
+
+
+.login {
+    width: 100%;
+    height: 100vh;
+    padding: 0rem 10rem;
+    @include flexDisplay(row, space-around, center);
+    transform: translateY(-12%);
+
+    *:hover,
+    *:active,
+    *:focus {
+        outline: none;
+    }
+
+    select {
+        border: none;
+    }
+
+    &_text {
+        color: $fb-clr;
+        max-width: 450px;
+
+        #headin {
+            font-size: 3.8rem;
+            margin-bottom: 0.6rem;
+            letter-spacing: 2px;
+        }
+
+        #para {
+            @include textColor();
+            font-size: 1.6rem;
+            line-height: 2.2rem;
+            word-spacing: 3px;
+        }
+
+    }
+
+
+    #{&}_box {
+        @include Border(4px, $border-c);
+        border-color: lighten($border-c, 10%);
+        padding: 1.2rem 1rem;
+        width: 32%;
+        position: relative;
+        border-radius: 8px;
+        transform: translateY(6%);
+
+
+        .input_fields {
+            @include flexDisplay(column, none, none);
+
+            #email {
+                @include forInputs();
+            }
+
+            #password {
+                @include forInputs();
+                margin-bottom: 2rem;
+            }
+
+        }
+
+        .button {
+            border-bottom: 2px solid $border-c;
+            margin-bottom: 1.4rem;
+
+            #login_button {
+                @include logReg($fb-clr, 100%, 1.26rem);
+                margin-bottom: $mrg-btn;
+                transition: 150ms ease-in;
+
+                &:hover {
+                    background-color: lighten($color: $fb-clr, $amount: 4%);
+                }
+            }
+
+            #lock {
+                @extend #login_button;
+                @include lighter($fb-clr, 30%, dark, $text-color);
+                user-select: none;
+                cursor: auto;
+            }
+
+            #forgot_password_button {
+                @include fPass();
+                border: none;
+                margin-bottom: 1rem;
+
+                &:hover {
+                    text-decoration: underline;
+                }
+            }
+        }
+
+        .create_button {
+            text-align: center;
+            margin-bottom: $mrg-btn;
+
+            #create_account_button {
+                @include logReg(green, auto, 1rem);
+                border: none;
+                transition: 150ms ease-in;
+
+                &:hover {
+                    background-color: lighten(green, 4%);
+                    border: none;
+                }
+            }
+
+        }
+
+
+    }
+
+    .register {
+        z-index: 1000;
+        width: inherit;
+        height: 124%;
+        background-color: rgba(0, 0, 0, 0.65) !important;
+        position: absolute;
+        user-select: none;
+
+        .register_box {
+            font-size: $name-font-size;
+            width: 100%;
+            transform: translateY(38%);
+            height: auto;
+            display: flex;
+            position: relative;
+            @include flexDisplay(column, center, center);
+
+
+            .register_box_contents {
+                background-color: rgb(26, 25, 25);
+                @include Border(4px, $border-c);
+                border-radius: 6px;
+                width: 36%;
+                padding: 1rem 0.8rem;
+
+                .register_form {
+                    font-size: 1.4rem;
+
+                    .register_head {
+                        @include flexDisplay(row, space-between, start);
+                        margin-bottom: 1.5rem;
+                    }
+
+                    .text_fields {
+                        @include flexDisplay(column, center, center);
+                        width: 100%;
+
+                        .name_field {
+                            @include flexDisplay(row, space-between, center);
+                        }
+
+                        input {
+                            @include forInputs();
+                            width: 100%;
+                        }
+
+                        input[type="text"] {
+                            width: 48%;
+                            @include flexDisplay(row, space-between, center);
+                        }
+
+                    }
+
+                    .select_fields {
+                        @include flexDisplay(row, space-between, center);
+                        position: relative;
+                        margin-top: 0.4rem;
+
+                        .selection_fields {
+                            @include flexDisplay(row, center, center);
+
+                            .selection_names {
+                                margin-right: 0.8rem;
+                            }
+
+                            .options {
+                                font-size: $name-font-size - 0.1rem;
+                                padding: 0.4rem 0.6rem;
+                                border-radius: 6px;
+                                width: inherit;
+                            }
+
+                        }
+                    }
+
+                    .radio_fields {
+                        @include flexDisplay(row, space-between, center);
+                        margin: 1.4rem 0rem 1.2rem 0rem;
+
+                        #radio_header {
+                            font-size: $name-font-size;
+                        }
+
+                        .radio_field {
+                            font-size: $name-font-size + 0.2rem;
+                            width: 42%;
+                            @include Border(2px, $border-c);
+                            padding: 0.4rem;
+                            border-radius: 10px;
+                            @include flexDisplay(row, space-between, center);
+
+                            label {
+                                cursor: pointer;
+                                width: 100%;
+                            }
+
+                        }
+
+                    }
+
+                    .policies {
+                        max-width: fit-content;
+                        @include infoText($border-c);
+                        height: 4.6rem;
+                        @include flexDisplay(column, space-between, center);
+                        margin-bottom: 1.4rem;
+                    }
+
+                    .sup_button {
+                        @include flexDisplay(row, center, center);
+                        width: 100%;
+                        margin-bottom: 0.4rem;
+
+                        #sign_button {
+                            @include logReg($fb-clr, 64%, $name-font-size + 0.2rem);
+                        }
+
+                    }
+
+                }
+
+            }
+        }
+
+    }
+}

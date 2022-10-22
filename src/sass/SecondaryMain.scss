@@ -1,0 +1,523 @@
+@import './variables';
+@import './reset.scss';
+@import './mixins.scss';
+@import './login.scss';
+
+#root {
+    @include DisplaySettings(column, true);
+    // height: 100vh;
+    position: relative;
+
+    .App {
+        @include DisplaySettings(column, true);
+        height: 100%;
+        overflow: hidden;
+
+        .news_feed {
+
+            .Head {
+                position: relative;
+                top: 0;
+                @include DisplaySettings(row, true);
+                background-color: lighten($primary-color, 100%);
+                color: darken($text-color, 80%);
+                @include lightMode($light: true);
+                text-decoration: dotted;
+                border-bottom: 2px solid $border-c;
+
+                &_up {
+                    @include HDisplay(space-between);
+
+                    &_right {
+                        background-color: red;
+                    }
+
+                    &_left {
+                        @include HDisplay(none);
+                        width: 30%;
+                        padding: 1.1rem 1rem 0.8rem 1.1rem;
+
+                        .search_box {
+                            @include HDisplay(none);
+                            width: 100%;
+
+                            .logo {
+                                width: 50px;
+                                height: 50px;
+                                margin-right: 1rem;
+
+                                #facebook_logo {
+                                    position: relative;
+                                    width: 100%;
+                                    height: 100%;
+                                    color: #4267B2;
+                                }
+
+                            }
+
+                            .input_field {
+                                display: flex;
+                                justify-self: center;
+
+                                #field {
+                                    width: 100%;
+                                    font-size: $name-font-size;
+                                    border: transparent;
+                                    padding: 0.6rem 1.0rem;
+                                    border-radius: 20px;
+                                }
+
+                            }
+
+                        }
+                    }
+                }
+            }
+
+            .main {
+                position: relative;
+                top: 1rem;
+                @include HDisplay(space-between);
+                background-color: transparent;
+                height: 100%;
+                width: 100%;
+
+                &_items {
+                    border-right: 2px solid $border-c;
+                    @include DisplaySettings(column, none);
+                    width: 26%;
+                    padding: 1rem 1rem 0.8rem 1.1rem;
+
+                    .item .point_me {
+                        background-color: grey;
+                        @include HDisplay(none);
+                        padding: 0.1rem;
+                        background-color: transparent;
+                        align-items: center;
+                        margin-bottom: 1.6rem;
+
+                        #icon {
+                            width: 15%;
+                            height: 2.5rem;
+                            margin-right: 0.8rem;
+                        }
+
+                        .des {
+                            position: relative;
+                            padding: 0.2rem;
+                            text-align: center;
+
+                            #name {
+                                color: $text-color;
+                                font-size: $name-font-size;
+                            }
+                        }
+                    }
+                }
+
+                &_left {
+                    padding: 1rem;
+                    width: 38%;
+
+                    .file_inputs {
+                        border: 2px solid white;
+                        border-radius: 14px;
+                        padding: 1rem;
+                    }
+
+
+                    .post {
+                        position: relative;
+                        display: block;
+                        width: 100%;
+                        background-color: #333;
+                        border-radius: 15px;
+                        margin-bottom: 2.0rem;
+
+                        .post_heading {
+                            background-color: transparent;
+                            @include HDisplay(none);
+                            padding: 0.2rem;
+                            border-top-right-radius: 10px;
+                            border-top-left-radius: 10px;
+                            align-items: center;
+
+                            #imageLoader {
+                                position: relative;
+                                bottom: 2px;
+                                margin-left: 0.6rem;
+                                align-self: center;
+                                border: none;
+                                height: 3.2rem;
+                                width: 3.2rem;
+                                overflow: hidden;
+                                border-radius: 50%;
+                                margin-right: 0.6rem;
+                            }
+
+
+                            #img {
+                                object-position: center;
+                                border-radius: 50%;
+                                width: 12% !important;
+                                margin-right: 0.6rem;
+                            }
+
+                            .des {
+                                @include flexOptional(column);
+                                position: relative;
+                                padding: 0.3rem;
+                                justify-content: space-between;
+
+                                #name {
+                                    color: $text-color;
+                                    font-size: $name-font-size;
+                                }
+
+                                #time {
+                                    color: rgb(126, 125, 125);
+                                    font-size: $time-font-size;
+                                }
+
+                            }
+                        }
+
+                        .post_self {
+                            width: 100%;
+                            margin: 0;
+                            position: relative;
+                            border-bottom: none;
+
+                            #post_img {
+                                width: 100%;
+                                border-radius: 3px;
+                            }
+                        }
+
+                        .pre_post_bottom {
+                            padding: 0.2rem 0rem 0.4rem 0.8rem;
+                            margin: 0;
+                            @include flexOptional(row);
+                            justify-content: start;
+                            align-items: center;
+
+                            .likes {
+                                margin-right: 1rem;
+                                @include flexOptional(row);
+                                align-items: center;
+
+                                #like_icon {
+                                    transform: translateY(-10%);
+                                    font-size: 1.2rem
+                                }
+
+                            }
+
+                            .comments {
+                                @include flexOptional(row);
+                                justify-content: start;
+                                align-items: center;
+                            }
+
+                            .small {
+                                font-size: 1.0rem;
+                                margin-left: 0.4rem;
+                            }
+
+                        }
+
+                        .post_bottom {
+                            margin: 0;
+                            position: relative;
+                            width: 100%;
+                            @include HDisplay(none);
+                            @include borderBottom();
+                            border: none;
+                            border-bottom-left-radius: inherit;
+                            border-bottom-right-radius: inherit;
+
+                            .like {
+                                width: 50%;
+                                padding: 0.4rem;
+                                @include flexOptional(row);
+                                justify-content: center;
+                                @include buttonActivity();
+                                border-bottom-left-radius: 14px;
+
+                                #like {
+                                    width: 20%;
+                                    height: 1.4rem;
+                                }
+                            }
+
+                            .comment {
+                                width: 50%;
+                                padding: 0.4rem;
+                                @include flexOptional(row);
+                                justify-content: center;
+                                @include buttonActivity();
+                                border-bottom-right-radius: 14px;
+
+                                #comment {
+                                    width: 20%;
+                                    height: 1.4rem;
+                                }
+                            }
+
+                        }
+
+                        .comment_main {
+
+                            .comment_person {
+                                @include flexOptional(column);
+                                padding: 0.4rem;
+
+                                .comment_background {
+                                    @include flexOptional(row);
+                                    justify-content: start;
+                                    align-items: start;
+                                    padding: 0.4rem 0.8rem;
+
+                                    #img {
+                                        width: 2.6rem;
+                                        height: 2.6rem;
+                                        border-radius: 50%;
+                                        margin-right: 0.6rem;
+                                    }
+
+                                    .info {
+                                        background-color: rgb(32, 32, 32);
+                                        border-radius: 16px;
+                                        width: 100%;
+                                        height: auto;
+                                        margin-left: 0.12rem;
+                                        @include flexOptional(column);
+                                        padding: 0.4rem 0.8rem;
+
+                                        #msg {
+                                            padding: 0.4rem 0rem;
+                                            text-align: justify;
+                                            line-height: 22px;
+                                        }
+
+                                    }
+
+                                }
+
+                            }
+
+                        }
+
+                    }
+
+                    .loader {
+                        animation: loader 1s linear infinite alternate;
+                    }
+
+                    .loading {
+                        opacity: .2;
+                        animation: loading 1s linear infinite alternate;
+                    }
+
+                    .desSub {
+                        @include flexOptional(column);
+                        position: relative;
+                        padding: 0.2rem;
+                        justify-content: space-around;
+                        height: 62px;
+
+                        .heading_name_loader {
+                            border-radius: 8px;
+                            width: 180px;
+                            height: 12px;
+                        }
+
+                        .heading_time_loader {
+                            border-radius: 8px;
+                            width: 180px;
+                            height: 12px;
+                        }
+
+                    }
+
+                    .self_loader {
+                        width: 100%;
+                        height: 64vh;
+                    }
+
+
+                    @keyframes loader {
+                        from {
+                            background-color: hsl(0, 0%, 14%);
+                        }
+
+                        to {
+                            background-color: hsl(0, 0%, 21%);
+                        }
+                    }
+
+                    @keyframes loading {
+                        from {
+                            background: rgb(54, 54, 54);
+                        }
+
+                        to {
+                            background: hsl(0, 0%, 51%);
+                        }
+                    }
+                }
+
+                &_right {
+                    width: 26%;
+                    padding: 0.8rem 0.8rem;
+                    border-left: 2px solid $border-c;
+
+                    .chat {
+                        user-select: none;
+                        background-color: grey;
+                        @include HDisplay(none);
+                        padding: 0.1rem;
+                        background-color: transparent;
+
+                        #img {
+                            height: 3.2rem;
+                            width: 3.2rem;
+                            overflow: hidden;
+                            border-radius: 50%;
+                            margin-right: 0.4rem;
+                        }
+
+                        .des {
+                            @include flexOptional(column);
+                            position: relative;
+                            padding: 0.2rem;
+                            justify-content: space-between;
+
+                            #name {
+                                color: $text-color;
+                                font-size: $name-font-size;
+                            }
+
+                            #active {
+                                color: $text-color;
+                                opacity: 0.5;
+                                font-size: 0.8rem;
+                            }
+
+                        }
+
+                        &_box {
+                            position: fixed;
+                            right: 0;
+                            bottom: 0;
+                            width: 22%;
+                            height: 56%;
+                            border: 4px solid $fb-clr;
+                            border-radius: 12px;
+
+                            .chat_head {
+                                background-color: $fb-clr;
+                                z-index: 100;
+                                user-select: none;
+                                font-size: 1.2rem;
+                                border: none;
+                                @include flexOptional(row);
+                                align-items: center;
+                                justify-content: space-between;
+                                padding: 0.8rem 0.6rem;
+
+                                #close_icon {
+                                    color: $chat-bg-clr;
+                                    transform: scale(1.4, 1.4);
+                                }
+
+                            }
+
+                            .chat_main {
+                                width: 100%;
+                                height: 78%;
+                                background-color: $chat-bg-clr;
+                                overflow: auto;
+
+                                .chat {
+                                    width: 100%;
+                                    margin-bottom: 0.6rem;
+                                    display: inline-flex;
+                                    justify-content: flex-start;
+
+                                    .chat_message {
+                                        width: auto;
+                                        max-width: 70%;
+
+                                        #message {
+                                            margin-left: auto;
+                                            padding: 0.8rem;
+                                            background-color: $fb-clr;
+                                            @include chatRadius(right, 4px);
+                                        }
+                                    }
+
+                                }
+
+                                .receiver_message {
+                                    width: 100%;
+                                    margin-bottom: 0.6rem;
+                                    display: inline-flex;
+                                    justify-content: flex-end;
+
+                                    .chat_message {
+                                        width: auto;
+                                        max-width: 70%;
+
+                                        #message {
+                                            padding: 0.8rem;
+                                            background-color: green;
+                                            @include chatRadius(left, 4px);
+                                            @include chatRadius(right, 0px);
+                                        }
+                                    }
+                                }
+                            }
+
+                            .chat_input {
+                                position: relative;
+                                height: inherit;
+
+                                .text_input {
+                                    padding: 0.2rem 0.4rem;
+                                    @include flexOptional(row);
+                                    align-items: center;
+                                    justify-content: space-between;
+
+                                    #writing_section {
+                                        width: 92%;
+                                        background-color: $border-c;
+                                        border-radius: 10px;
+                                        border: none;
+                                        font-size: 1rem;
+                                        padding: 0.4rem 0.2rem;
+                                    }
+
+                                    #emoji {
+                                        width: 12%;
+                                        height: 1.4rem;
+                                        color: rgb(87, 87, 87);
+                                    }
+
+                                }
+
+                            }
+
+                        }
+
+                    }
+                }
+
+            }
+        }
+    }
+}
+
+.point_me {
+    cursor: pointer;
+}

@@ -1,0 +1,808 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.login {
+  width: 100%;
+  height: 100vh;
+  padding: 0rem 10rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  transform: translateY(-12%);
+}
+.login *:hover,
+.login *:active,
+.login *:focus {
+  outline: none;
+}
+.login select {
+  border: none;
+}
+.login_text {
+  color: #376cdd;
+  max-width: 450px;
+}
+.login_text #headin {
+  font-size: 3.8rem;
+  margin-bottom: 0.6rem;
+  letter-spacing: 2px;
+}
+.login_text #para {
+  color: white;
+  opacity: 0.86;
+  font-size: 1.6rem;
+  line-height: 2.2rem;
+  word-spacing: 3px;
+}
+.login .login_box {
+  border: 4px solid rgb(65, 64, 64);
+  border-color: #5b5959;
+  padding: 1.2rem 1rem;
+  width: 32%;
+  position: relative;
+  border-radius: 8px;
+  transform: translateY(6%);
+}
+.login .login_box .input_fields {
+  display: flex;
+  flex-direction: column;
+  justify-content: none;
+  align-items: none;
+}
+.login .login_box .input_fields #email {
+  font-size: 1.2rem;
+  padding: 1.2rem 1rem;
+  border-radius: 6px;
+  border: none;
+  margin-bottom: 1rem;
+}
+.login .login_box .input_fields #password {
+  font-size: 1.2rem;
+  padding: 1.2rem 1rem;
+  border-radius: 6px;
+  border: none;
+  margin-bottom: 1rem;
+  margin-bottom: 2rem;
+}
+.login .login_box .button {
+  border-bottom: 2px solid rgb(65, 64, 64);
+  margin-bottom: 1.4rem;
+}
+.login .login_box .button #login_button, .login .login_box .button #lock {
+  color: white;
+  opacity: 0.86;
+  background-color: #376cdd;
+  width: 100%;
+  padding: 0.8rem;
+  border-radius: 6px;
+  font-size: 1.26rem;
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 1rem;
+  transition: 150ms ease-in;
+}
+.login .login_box .button #login_button:hover, .login .login_box .button #lock:hover {
+  background-color: #4879e0;
+}
+.login .login_box .button #lock {
+  background-color: #122e69;
+  color: #b3b3b3;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  cursor: auto;
+}
+.login .login_box .button #forgot_password_button {
+  width: 100%;
+  background-color: transparent;
+  display: block;
+  text-align: center;
+  color: #376cdd;
+  border: none;
+  margin-bottom: 1rem;
+}
+.login .login_box .button #forgot_password_button:hover {
+  text-decoration: underline;
+}
+.login .login_box .create_button {
+  text-align: center;
+  margin-bottom: 1rem;
+}
+.login .login_box .create_button #create_account_button {
+  color: white;
+  opacity: 0.86;
+  background-color: green;
+  width: auto;
+  padding: 0.8rem;
+  border-radius: 6px;
+  font-size: 1rem;
+  font-weight: bold;
+  text-align: center;
+  border: none;
+  transition: 150ms ease-in;
+}
+.login .login_box .create_button #create_account_button:hover {
+  background-color: #009400;
+  border: none;
+}
+.login .register {
+  z-index: 1000;
+  width: inherit;
+  height: 124%;
+  background-color: rgba(0, 0, 0, 0.65) !important;
+  position: absolute;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}
+.login .register .register_box {
+  font-size: 1.1rem;
+  width: 100%;
+  transform: translateY(38%);
+  height: auto;
+  display: flex;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.login .register .register_box .register_box_contents {
+  background-color: rgb(26, 25, 25);
+  border: 4px solid rgb(65, 64, 64);
+  border-radius: 6px;
+  width: 36%;
+  padding: 1rem 0.8rem;
+}
+.login .register .register_box .register_box_contents .register_form {
+  font-size: 1.4rem;
+}
+.login .register .register_box .register_box_contents .register_form .register_head {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: start;
+  margin-bottom: 1.5rem;
+}
+.login .register .register_box .register_box_contents .register_form .text_fields {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+.login .register .register_box .register_box_contents .register_form .text_fields .name_field {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+.login .register .register_box .register_box_contents .register_form .text_fields input {
+  font-size: 1.2rem;
+  padding: 1.2rem 1rem;
+  border-radius: 6px;
+  border: none;
+  margin-bottom: 1rem;
+  width: 100%;
+}
+.login .register .register_box .register_box_contents .register_form .text_fields input[type=text] {
+  width: 48%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+.login .register .register_box .register_box_contents .register_form .select_fields {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+  margin-top: 0.4rem;
+}
+.login .register .register_box .register_box_contents .register_form .select_fields .selection_fields {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+.login .register .register_box .register_box_contents .register_form .select_fields .selection_fields .selection_names {
+  margin-right: 0.8rem;
+}
+.login .register .register_box .register_box_contents .register_form .select_fields .selection_fields .options {
+  font-size: 1rem;
+  padding: 0.4rem 0.6rem;
+  border-radius: 6px;
+  width: inherit;
+}
+.login .register .register_box .register_box_contents .register_form .radio_fields {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  margin: 1.4rem 0rem 1.2rem 0rem;
+}
+.login .register .register_box .register_box_contents .register_form .radio_fields #radio_header {
+  font-size: 1.1rem;
+}
+.login .register .register_box .register_box_contents .register_form .radio_fields .radio_field {
+  font-size: 1.3rem;
+  width: 42%;
+  border: 2px solid rgb(65, 64, 64);
+  padding: 0.4rem;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+.login .register .register_box .register_box_contents .register_form .radio_fields .radio_field label {
+  cursor: pointer;
+  width: 100%;
+}
+.login .register .register_box .register_box_contents .register_form .policies {
+  max-width: -webkit-fit-content;
+  max-width: -moz-fit-content;
+  max-width: fit-content;
+  font-size: 0.8rem;
+  color: rgb(65, 64, 64);
+  line-height: 1rem;
+  height: 4.6rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1.4rem;
+}
+.login .register .register_box .register_box_contents .register_form .sup_button {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  margin-bottom: 0.4rem;
+}
+.login .register .register_box .register_box_contents .register_form .sup_button #sign_button {
+  color: white;
+  opacity: 0.86;
+  background-color: #376cdd;
+  width: 64%;
+  padding: 0.8rem;
+  border-radius: 6px;
+  font-size: 1.3rem;
+  font-weight: bold;
+  text-align: center;
+}
+
+#root {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  position: relative;
+  position: relative;
+}
+#root .App {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  position: relative;
+  height: 100%;
+  overflow: hidden;
+}
+#root .App .news_feed .Head {
+  position: relative;
+  top: 0;
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  position: relative;
+  background-color: white;
+  color: #333333;
+  background-color: #252525;
+  color: white;
+  -webkit-text-decoration: dotted;
+          text-decoration: dotted;
+  border-bottom: 2px solid rgb(65, 64, 64);
+}
+#root .App .news_feed .Head_up {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  position: relative;
+  justify-content: space-between;
+}
+#root .App .news_feed .Head_up_right {
+  background-color: red;
+}
+#root .App .news_feed .Head_up_left {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  position: relative;
+  justify-content: none;
+  width: 30%;
+  padding: 1.1rem 1rem 0.8rem 1.1rem;
+}
+#root .App .news_feed .Head_up_left .search_box {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  position: relative;
+  justify-content: none;
+  width: 100%;
+}
+#root .App .news_feed .Head_up_left .search_box .logo {
+  width: 50px;
+  height: 50px;
+  margin-right: 1rem;
+}
+#root .App .news_feed .Head_up_left .search_box .logo #facebook_logo {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  color: #4267B2;
+}
+#root .App .news_feed .Head_up_left .search_box .input_field {
+  display: flex;
+  justify-self: center;
+}
+#root .App .news_feed .Head_up_left .search_box .input_field #field {
+  width: 100%;
+  font-size: 1.1rem;
+  border: transparent;
+  padding: 0.6rem 1rem;
+  border-radius: 20px;
+}
+#root .App .news_feed .main {
+  position: relative;
+  top: 1rem;
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  position: relative;
+  justify-content: space-between;
+  background-color: transparent;
+  height: 100%;
+  width: 100%;
+}
+#root .App .news_feed .main_items {
+  border-right: 2px solid rgb(65, 64, 64);
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  position: relative;
+  width: 26%;
+  padding: 1rem 1rem 0.8rem 1.1rem;
+}
+#root .App .news_feed .main_items .item .point_me {
+  background-color: grey;
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  position: relative;
+  justify-content: none;
+  padding: 0.1rem;
+  background-color: transparent;
+  align-items: center;
+  margin-bottom: 1.6rem;
+}
+#root .App .news_feed .main_items .item .point_me #icon {
+  width: 15%;
+  height: 2.5rem;
+  margin-right: 0.8rem;
+}
+#root .App .news_feed .main_items .item .point_me .des {
+  position: relative;
+  padding: 0.2rem;
+  text-align: center;
+}
+#root .App .news_feed .main_items .item .point_me .des #name {
+  color: white;
+  font-size: 1.1rem;
+}
+#root .App .news_feed .main_left {
+  padding: 1rem;
+  width: 38%;
+}
+#root .App .news_feed .main_left .post {
+  position: relative;
+  display: block;
+  width: 100%;
+  background-color: #333;
+  border-radius: 15px;
+  margin-bottom: 2rem;
+}
+#root .App .news_feed .main_left .post .post_heading {
+  background-color: transparent;
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  position: relative;
+  justify-content: none;
+  padding: 0.2rem;
+  border-top-right-radius: 10px;
+  border-top-left-radius: 10px;
+  align-items: center;
+}
+#root .App .news_feed .main_left .post .post_heading #imageLoader {
+  position: relative;
+  bottom: 2px;
+  margin-left: 0.6rem;
+  align-self: center;
+  border: none;
+  height: 3.2rem;
+  width: 3.2rem;
+  overflow: hidden;
+  border-radius: 50%;
+  margin-right: 0.6rem;
+}
+#root .App .news_feed .main_left .post .post_heading #img {
+  -o-object-position: center;
+     object-position: center;
+  border-radius: 50%;
+  width: 12% !important;
+  margin-right: 0.6rem;
+}
+#root .App .news_feed .main_left .post .post_heading .des {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  position: relative;
+  padding: 0.3rem;
+  justify-content: space-between;
+}
+#root .App .news_feed .main_left .post .post_heading .des #name {
+  color: white;
+  font-size: 1.1rem;
+}
+#root .App .news_feed .main_left .post .post_heading .des #time {
+  color: rgb(126, 125, 125);
+  font-size: 1rem;
+}
+#root .App .news_feed .main_left .post .post_self {
+  width: 100%;
+  margin: 0;
+  position: relative;
+  border-bottom: none;
+}
+#root .App .news_feed .main_left .post .post_self #post_img {
+  width: 100%;
+  border-radius: 3px;
+}
+#root .App .news_feed .main_left .post .pre_post_bottom {
+  padding: 0.2rem 0rem 0.4rem 0.8rem;
+  margin: 0;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: start;
+  align-items: center;
+}
+#root .App .news_feed .main_left .post .pre_post_bottom .likes {
+  margin-right: 1rem;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  align-items: center;
+}
+#root .App .news_feed .main_left .post .pre_post_bottom .likes #like_icon {
+  transform: translateY(-10%);
+  font-size: 1.2rem;
+}
+#root .App .news_feed .main_left .post .pre_post_bottom .comments {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: start;
+  align-items: center;
+}
+#root .App .news_feed .main_left .post .pre_post_bottom .small {
+  font-size: 1rem;
+  margin-left: 0.4rem;
+}
+#root .App .news_feed .main_left .post .post_bottom {
+  margin: 0;
+  position: relative;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  position: relative;
+  justify-content: none;
+  border-bottom: 2px solid rgb(65, 64, 64);
+  border-left: 2px solid rgb(65, 64, 64);
+  border-right: 2px solid rgb(65, 64, 64);
+  border-bottom-left-radius: 100px;
+  border-bottom-right-radius: 100px;
+  border: none;
+  border-bottom-left-radius: inherit;
+  border-bottom-right-radius: inherit;
+}
+#root .App .news_feed .main_left .post .post_bottom .like {
+  width: 50%;
+  padding: 0.4rem;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: center;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  border-bottom-left-radius: 14px;
+}
+#root .App .news_feed .main_left .post .post_bottom .like #like {
+  width: 20%;
+  height: 1.4rem;
+}
+#root .App .news_feed .main_left .post .post_bottom .comment {
+  width: 50%;
+  padding: 0.4rem;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: center;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  border-bottom-right-radius: 14px;
+}
+#root .App .news_feed .main_left .post .post_bottom .comment #comment {
+  width: 20%;
+  height: 1.4rem;
+}
+#root .App .news_feed .main_left .post .comment_main .comment_person {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  padding: 0.4rem;
+}
+#root .App .news_feed .main_left .post .comment_main .comment_person .comment_background {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: start;
+  align-items: start;
+  padding: 0.4rem 0.8rem;
+}
+#root .App .news_feed .main_left .post .comment_main .comment_person .comment_background #img {
+  width: 2.6rem;
+  height: 2.6rem;
+  border-radius: 50%;
+  margin-right: 0.6rem;
+}
+#root .App .news_feed .main_left .post .comment_main .comment_person .comment_background .info {
+  background-color: rgb(32, 32, 32);
+  border-radius: 16px;
+  width: 100%;
+  height: auto;
+  margin-left: 0.12rem;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  padding: 0.4rem 0.8rem;
+}
+#root .App .news_feed .main_left .post .comment_main .comment_person .comment_background .info #msg {
+  padding: 0.4rem 0rem;
+  text-align: justify;
+  line-height: 22px;
+}
+#root .App .news_feed .main_left .loader {
+  -webkit-animation: loader 1s linear infinite alternate;
+          animation: loader 1s linear infinite alternate;
+}
+#root .App .news_feed .main_left .loading {
+  opacity: 0.2;
+  -webkit-animation: loading 1s linear infinite alternate;
+          animation: loading 1s linear infinite alternate;
+}
+#root .App .news_feed .main_left .desSub {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  position: relative;
+  padding: 0.2rem;
+  justify-content: space-around;
+  height: 62px;
+}
+#root .App .news_feed .main_left .desSub .heading_name_loader {
+  border-radius: 8px;
+  width: 180px;
+  height: 12px;
+}
+#root .App .news_feed .main_left .desSub .heading_time_loader {
+  border-radius: 8px;
+  width: 180px;
+  height: 12px;
+}
+#root .App .news_feed .main_left .self_loader {
+  width: 100%;
+  height: 64vh;
+}
+@-webkit-keyframes loader {
+  from {
+    background-color: hsl(0deg, 0%, 14%);
+  }
+  to {
+    background-color: hsl(0deg, 0%, 21%);
+  }
+}
+@keyframes loader {
+  from {
+    background-color: hsl(0deg, 0%, 14%);
+  }
+  to {
+    background-color: hsl(0deg, 0%, 21%);
+  }
+}
+@-webkit-keyframes loading {
+  from {
+    background: rgb(54, 54, 54);
+  }
+  to {
+    background: hsl(0deg, 0%, 51%);
+  }
+}
+@keyframes loading {
+  from {
+    background: rgb(54, 54, 54);
+  }
+  to {
+    background: hsl(0deg, 0%, 51%);
+  }
+}
+#root .App .news_feed .main_right {
+  width: 26%;
+  padding: 0.8rem 0.8rem;
+  border-left: 2px solid rgb(65, 64, 64);
+}
+#root .App .news_feed .main_right .chat {
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  background-color: grey;
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  position: relative;
+  justify-content: none;
+  padding: 0.1rem;
+  background-color: transparent;
+}
+#root .App .news_feed .main_right .chat #img {
+  height: 3.2rem;
+  width: 3.2rem;
+  overflow: hidden;
+  border-radius: 50%;
+  margin-right: 0.4rem;
+}
+#root .App .news_feed .main_right .chat .des {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  position: relative;
+  padding: 0.2rem;
+  justify-content: space-between;
+}
+#root .App .news_feed .main_right .chat .des #name {
+  color: white;
+  font-size: 1.1rem;
+}
+#root .App .news_feed .main_right .chat .des #active {
+  color: white;
+  opacity: 0.5;
+  font-size: 0.8rem;
+}
+#root .App .news_feed .main_right .chat_box {
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  width: 22%;
+  height: 56%;
+  border: 4px solid #376cdd;
+  border-radius: 12px;
+}
+#root .App .news_feed .main_right .chat_box .chat_head {
+  background-color: #376cdd;
+  z-index: 100;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  font-size: 1.2rem;
+  border: none;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.8rem 0.6rem;
+}
+#root .App .news_feed .main_right .chat_box .chat_head #close_icon {
+  color: rgb(26, 26, 26);
+  transform: scale(1.4, 1.4);
+}
+#root .App .news_feed .main_right .chat_box .chat_main {
+  width: 100%;
+  height: 78%;
+  background-color: rgb(26, 26, 26);
+  overflow: auto;
+}
+#root .App .news_feed .main_right .chat_box .chat_main .chat {
+  width: 100%;
+  margin-bottom: 0.6rem;
+  display: inline-flex;
+  justify-content: flex-start;
+}
+#root .App .news_feed .main_right .chat_box .chat_main .chat .chat_message {
+  width: auto;
+  max-width: 70%;
+}
+#root .App .news_feed .main_right .chat_box .chat_main .chat .chat_message #message {
+  margin-left: auto;
+  padding: 0.8rem;
+  background-color: #376cdd;
+  border-bottom-right-radius: 4px;
+  border-top-right-radius: 4px;
+}
+#root .App .news_feed .main_right .chat_box .chat_main .receiver_message {
+  width: 100%;
+  margin-bottom: 0.6rem;
+  display: inline-flex;
+  justify-content: flex-end;
+}
+#root .App .news_feed .main_right .chat_box .chat_main .receiver_message .chat_message {
+  width: auto;
+  max-width: 70%;
+}
+#root .App .news_feed .main_right .chat_box .chat_main .receiver_message .chat_message #message {
+  padding: 0.8rem;
+  background-color: green;
+  border-bottom-left-radius: 4px;
+  border-top-left-radius: 4px;
+  border-bottom-right-radius: 0px;
+  border-top-right-radius: 0px;
+}
+#root .App .news_feed .main_right .chat_box .chat_input {
+  position: relative;
+  height: inherit;
+}
+#root .App .news_feed .main_right .chat_box .chat_input .text_input {
+  padding: 0.2rem 0.4rem;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  align-items: center;
+  justify-content: space-between;
+}
+#root .App .news_feed .main_right .chat_box .chat_input .text_input #writing_section {
+  width: 92%;
+  background-color: rgb(65, 64, 64);
+  border-radius: 10px;
+  border: none;
+  font-size: 1rem;
+  padding: 0.4rem 0.2rem;
+}
+#root .App .news_feed .main_right .chat_box .chat_input .text_input #emoji {
+  width: 12%;
+  height: 1.4rem;
+  color: rgb(87, 87, 87);
+}
+
+.point_me {
+  cursor: pointer;
+}/*# sourceMappingURL=main.css.map */
